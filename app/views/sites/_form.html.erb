@@ -1,0 +1,12 @@
+<%= form_for(@site, remote: true) do |f| %>
+    <p>
+        <strong>タイトル</strong>
+        <%= f.text_field(:title) %>
+    </p>
+    <p><strong>アドレス</strong></p>
+    <%= f.url_field(:address) %>
+    <p><strong>紹介文</strong></p>
+    <%= f.text_area(:introduction) %>
+
+    <%= f.submit "作成" %>
+<% end %>
