@@ -12,6 +12,10 @@
       <strong>紹介文</strong>  
     <%= s.introduction %>
 </p>
+
+<%= link_to  "詳細", site_path(s) %>
 <% end %>
+
+<%= paginate @sites %>
 
 <%= link_to  "作成する", new_site_path %>

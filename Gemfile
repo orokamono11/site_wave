@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'kaminari-bootstrap'
 gem 'jquery-turbolinks'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
@@ -41,7 +41,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'unicorn' 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -53,7 +53,7 @@ end
 group :development do
   gem 'hirb'         # 出力結果を表として出力するgem
   gem 'hirb-unicode'  # マルチバイト文字の表示を補正するgem
-  gem 'unicorn' 
+  
   gem 'better_errors' # エラー内容をわかりやすく表示
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'

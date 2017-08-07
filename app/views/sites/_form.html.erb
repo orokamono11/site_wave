@@ -1,4 +1,6 @@
 <%= form_for(@site, remote: true) do |f| %>
+    <!-- user_idを入れる -->
+    <%= f.hidden_field :user_id, value: current_user.id %>
     <p>
         <strong>タイトル</strong>
         <%= f.text_field(:title) %>

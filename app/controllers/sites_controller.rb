@@ -1,6 +1,7 @@
 class SitesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :destroy, :edit, :update]
   def index
-    @sites = Site.all
+    @sites = Site.page(params[:page])
   end
 
   def show
@@ -30,6 +31,6 @@ class SitesController < ApplicationController
   
   private
     def site_params
-      params.require(:site).permit(:title, :address, :introduction)
+      params.require(:site).permit(:title, :address, :introduction, :user_id)
     end
 end
