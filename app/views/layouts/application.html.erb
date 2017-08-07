@@ -3,7 +3,6 @@
   <head>
     <title>SiteWave</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -27,16 +26,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                 aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+      
       <% if user_signed_in? %>
           ようこそ <%= current_user.user_name %> さん
       <% else %>
           ようこそ ゲスト さん
       <% end %>
-      
     </button>
-    <%= button_to  "トップ", sites_path %>
         </nav>
-       
     </div>
 </header>
 

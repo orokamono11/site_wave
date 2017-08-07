@@ -11,7 +11,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-gem 'devise'
 gem 'kaminari' # ページネーション
 gem 'impressionist' # ページビュー
 gem 'ransack' #検索
