@@ -5,12 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
 gem 'jquery-turbolinks'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'devise-bootstrap-views'
 gem 'kaminari' # ページネーション
 gem 'impressionist' # ページビュー
 gem 'ransack' #検索
