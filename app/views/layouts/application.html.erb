@@ -9,6 +9,37 @@
   </head>
 
   <body>
+
+    <header>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-inverse p-4">
+                <% if user_signed_in? %>
+                    <%= link_to  "プロフィール編集", edit_user_registration_path %>
+                    <%= link_to  "ログアウト", destroy_user_session_path, method: :delete %>
+                <% else %>
+                    <%= link_to  "ユーザー登録", new_user_registration_path %>
+                    <%= link_to  "ログイン", new_user_session_path %>
+                <% end %>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse bg-inverse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <% if user_signed_in? %>
+          ようこそ <%= current_user.user_name %> さん
+      <% else %>
+          ようこそ ゲスト さん
+      <% end %>
+      
+    </button>
+    <%= button_to  "トップ", sites_path %>
+        </nav>
+       
+    </div>
+</header>
+
     <%= yield %>
   </body>
 </html>
