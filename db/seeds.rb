@@ -13,3 +13,9 @@
         introduction: "紹介文#{d}"
     )
 end
+# User.create!(user_name:  "girujinia",
+#              email: "girujinia@gmail.com",
+#              password:              "sgirujinia",
+#              password_confirmation: "sgirujinia")
+
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
