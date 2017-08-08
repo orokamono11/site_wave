@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-50.times do |d|
+500.times do |d|
     Site.create(
         user_id: 1,
         title: "サイト#{d}",
-        address: "site#{d}.co.jp",
+        address: "site#{d}.com",
         introduction: "紹介文#{d}"
     )
 end
