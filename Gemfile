@@ -50,6 +50,9 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+group :production do
+  gem 'pg'
+end
 group :development do
   gem 'hirb'         # 出力結果を表として出力するgem
   gem 'hirb-unicode'  # マルチバイト文字の表示を補正するgem
